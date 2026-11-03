@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthony Kamau — Full-Stack &amp; Android Developer</title>
+
+<!--
+  ============================================================
+  HOW THIS PROJECT IS STRUCTURED
+  ============================================================
+  index.html  -> page content and structure.
+  style.css   -> all visual styling (colors, layout, fonts).
+  script.js   -> interactivity AND your links.
+
+  >>> TO ADD YOUR DEMO VIDEOS, GITHUB, EMAIL, LINKEDIN: <<<
+  Open script.js and edit the "YOUR LINKS" block at the very top.
+  You never need to touch this HTML file for links. Any link you
+  leave empty is hidden automatically, so no dead buttons go live.
+  ============================================================
+-->
+
+<!-- Search engines + link previews (WhatsApp, LinkedIn, X) -->
+<meta name="description" content="Anthony Kamau — BBIT student at Strathmore University building full-stack web platforms (PHP, MySQL) and Android apps (Kotlin). Open to internships in Kenya.">
+<meta name="author" content="Anthony Kamau">
+<meta name="theme-color" content="#0D0D0D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anthony Kamau — Full-Stack & Android Developer">
+<meta property="og:description" content="Web platforms and Android apps built end to end. CertsVerify, FoodChap, BudgetApp and more — with demo videos.">
+
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to projects</a>
+
+<header>
+  <nav aria-label="Main">
+    <a href="#top" class="logo">Anthony<span> Kamau</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#now">Now</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">MENU</button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="pitch-arc" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker">Nairobi, Kenya · Seeking 8–12 week attachment · January 2027</div>
+    <h1 class="hero-title">Building software<br>that plays <span class="accent">to win.</span></h1>
+    <p class="hero-sub">I'm a third-year Bachelor of Business Information Technology student at Strathmore University, interested in software development, Android applications and business systems. I build web platforms and mobile apps end to end — from database design to the screens people use.</p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+
+    <div class="hero-stats" aria-label="At a glance">
+      <div><b>4</b><span>Projects built</span></div>
+      <div><b>2</b><span>Android apps</span></div>
+      <div><b>2</b><span>Web platforms</span></div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+      <div class="ticker-item">
+        <span><b>PHP</b></span><span class="dot-sep">●</span>
+        <span><b>MySQL</b></span><span class="dot-sep">●</span>
+        <span><b>Kotlin</b></span><span class="dot-sep">●</span>
+        <span><b>Android Studio</b></span><span class="dot-sep">●</span>
+        <span><b>JavaScript</b></span><span class="dot-sep">●</span>
+        <span><b>Python</b></span><span class="dot-sep">●</span>
+        <span><b>Bootstrap</b></span><span class="dot-sep">●</span>
+        <span><b>HTML / CSS</b></span><span class="dot-sep">●</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section-pad" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-eyebrow">Selected Work</div>
+        <h2 class="section-title">Match Reports</h2>
+      </div>
+      <div class="section-note">Four projects across web and Android. Explore the features, technologies and screenshots from each build.</div>
+    </div>
+
+    <!-- Filter: web vs mobile -->
+    <div class="filter reveal" role="group" aria-label="Filter projects">
+      <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+      <button class="filter-btn" data-filter="mobile" aria-pressed="false">Android</button>
+    </div>
+
+    <div class="fixtures">
+
+      <!-- ============ FIXTURE 1: CertsVerify ============ -->
+      <article class="fixture reveal" data-kind="web" data-project="certsverify">
+        <div>
+          <div class="fixture-head">
+            <h3 class="fixture-name">CertsVerify</h3>
+            <div class="status-badge status-demo">Web Platform</div>
+          </div>
+          <p class="fixture-desc">A certificate verification platform for universities, graduates and employers. Registrars issue certificates, graduates share them, and employers confirm in seconds that a certificate is genuine — by Certificate ID, QR code, or by uploading a scanned PDF that the system reads with OCR.</p>
+          <div class="fixture-note"><b>The hard part:</b> building an OCR pipeline (Ghostscript + Tesseract) that reliably extracts structured data from inconsistent certificate layouts using anchor-phrase parsing — not just dumping raw text. <a href="#process" class="inline-link">Read how it happened ↓</a></div>
+
+          <ul class="feature-list">
+            <li>Four roles — Graduate, Employer, Registrar, SysAdmin — each with its own dashboard</li>
+            <li>OCR batch upload reads name, admission number, course and grade off scanned PDFs</li>
+            <li>Admin dashboard with live stats, search and pagination; 2FA and password-strength rules</li>
+            <li>Seeded with 50 sample certificates across 10 Kenyan universities (IDs like <code>CV-2025-UON-00012</code>)</li>
+          </ul>
+
+          <div class="fixture-links">
+            <a data-link="live" target="_blank" rel="noopener">Live site →</a>
+            <a data-link="code" target="_blank" rel="noopener">Source code →</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-gallery" aria-label="CertsVerify screenshots">
+            <figure><img src="images/Home.png" alt="CertsVerify public home page" loading="lazy"> <figcaption>Public home page</figcaption></figure>
+            <figure><img src="images/registrar_dashboard.png" alt="CertsVerify registrar dashboard" loading="lazy"> <figcaption>Registrar dashboard</figcaption></figure>
+            <figure><img src="images/certs_verification.png" alt="CertsVerify certificate verification screen" loading="lazy"> <figcaption>Certificate verification</figcaption></figure>
+      
+          </div>
+          <div class="lineup-label">Scoreline</div>
+          <div class="score-row">
+            <div class="score-stat"><div class="score-num">4</div><div class="score-label">User Roles</div></div>
+            <div class="score-stat"><div class="score-num">2FA</div><div class="score-label">Admin Security</div></div>
+            <div class="score-stat"><div class="score-num">OCR</div><div class="score-label">Batch Upload</div></div>
+          </div>
+          <div class="lineup-label">Lineup</div>
+          <div class="lineup">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap 5</span>
+            <span class="tag">Tesseract OCR</span><span class="tag">Ghostscript</span><span class="tag">PHPMailer</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ FIXTURE 2: FoodChap (Android) ============ -->
+      <article class="fixture reveal" data-kind="mobile" data-project="foodchap">
+        <div>
+          <div class="fixture-head">
+            <h3 class="fixture-name">FoodChap</h3>
+            <div class="status-badge status-mobile">Android App</div>
+          </div>
+          <p class="fixture-desc">A meal-planning and recipe discovery app that makes everyday cooking easier. FoodChap brings Kenyan and international dishes together in one place, organised by meal type, so you can go from <em>"what should I cook?"</em> to a finished plate — with every ingredient, every step and a timer to keep you on track.</p>
+          <div class="fixture-note"><b>What makes it different:</b> it doesn't stop at the recipe. Each dish comes with meal pairings — what to serve it with — and built-in cooking timers, so FoodChap plans the whole meal and guides you through cooking it, not just one dish on a page.</div>
+
+          <ul class="feature-list">
+            <li><b>Kenyan + international recipes</b>, organised by meal type — breakfast, lunch, supper and more</li>
+            <li><b>Recipe search</b> to find a dish fast</li>
+            <li>Full <b>ingredient lists</b> and <b>step-by-step cooking instructions</b></li>
+            <li>Built-in <b>cooking timers</b> while you cook</li>
+            <li><b>Meal pairings</b> — suggestions for what goes well together</li>
+            <li><b>Light and dark modes</b></li>
+          </ul>
+
+          <div class="fixture-links">
+            <a data-link="video" role="button">Watch YouTube demo →</a>
+            <a data-link="apk" target="_blank" rel="noopener">Download APK →</a>
+            <a data-link="code" target="_blank" rel="noopener">Source code →</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-gallery mobile-gallery" aria-label="FoodChap screenshots">
+            <figure><img src="images/foodchap_home.jpeg" alt="FoodChap recipe discovery home screen" loading="lazy"> <figcaption>Home &amp; recipe discovery</figcaption></figure>
+            <figure><img src="images/Food_ingredient.jpeg" alt="FoodChap recipe ingredients and servings screen" loading="lazy"> <figcaption>Recipe details &amp; ingredients</figcaption></figure>
+          </div>
+          <div class="lineup-label">Scoreline</div>
+          <div class="score-row">
+            <div class="score-stat"><div class="score-num">KE + Intl</div><div class="score-label">Cuisines</div></div>
+            <div class="score-stat"><div class="score-num">Timers</div><div class="score-label">Built In</div></div>
+            <div class="score-stat"><div class="score-num">2</div><div class="score-label">Themes</div></div>
+          </div>
+          <div class="lineup-label">Lineup</div>
+          <div class="lineup">
+            <span class="tag">Kotlin</span><span class="tag">Android Studio</span><span class="tag">Recipe Search</span><span class="tag">Light / Dark Mode</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ FIXTURE 3: BudgetApp (Android) ============ -->
+      <article class="fixture reveal" data-kind="mobile" data-project="budget">
+        <div>
+          <div class="fixture-head">
+            <h3 class="fixture-name">BudgetApp</h3>
+            <div class="status-badge status-mobile">Android App</div>
+          </div>
+          <p class="fixture-desc">A personal finance and expense-tracking app that helps you understand where your money goes — and manage it before it's gone. Log expenses, review your transaction history, see your spending broken down, set budget limits and save towards goals, all in one place.</p>
+          <div class="fixture-note"><b>What makes it different:</b> <b>Money Sensei</b>, a built-in AI coach. Instead of just showing numbers, it reads your spending and gives you insights in plain language — plus a <b>Survival Forecast</b> that estimates how long your money will last at the rate you're spending.</div>
+
+          <ul class="feature-list">
+            <li><b>Expense logging</b> and full <b>transaction history</b></li>
+            <li><b>Spending analytics</b> — see where your money actually goes</li>
+            <li><b>Budget limits</b> with <b>alerts</b> before you overspend</li>
+            <li><b>Savings goals</b> with progress tracking</li>
+            <li><b>Money Sensei</b> — AI-powered spending insights</li>
+            <li><b>Survival Forecast</b> — how many days your money may last</li>
+          </ul>
+
+          <div class="fixture-links">
+            <a data-link="video" role="button">Watch YouTube demo →</a>
+            <a data-link="apk" target="_blank" rel="noopener">Download APK →</a>
+            <a data-link="code" target="_blank" rel="noopener">Source code →</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-gallery mobile-gallery" aria-label="BudgetApp screenshots">
+            <figure><img src="images/budget_.home.jpeg" alt="BudgetApp finance dashboard" loading="lazy"> <figcaption>Home dashboard</figcaption></figure>
+            <figure><img src="images/Budget_history.jpeg" alt="BudgetApp transaction history screen" loading="lazy"> <figcaption>Expense history</figcaption></figure>
+          </div>
+          <div class="lineup-label">Scoreline</div>
+          <div class="score-row">
+            <div class="score-stat"><div class="score-num">AI</div><div class="score-label">Money Coach</div></div>
+            <div class="score-stat"><div class="score-num">Forecast</div><div class="score-label">Money Runway</div></div>
+            <div class="score-stat"><div class="score-num">Alerts</div><div class="score-label">Budget Limits</div></div>
+          </div>
+          <div class="lineup-label">Lineup</div>
+          <div class="lineup">
+            <span class="tag">Kotlin</span><span class="tag">Android Studio</span><span class="tag">AI Insights</span><span class="tag">Spending Analytics</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ FIXTURE 4: TrailHire ============ -->
+      <article class="fixture reveal" data-kind="web" data-project="trailhire">
+        <div>
+          <div class="fixture-head">
+            <h3 class="fixture-name">TrailHire</h3>
+            <div class="status-badge status-live">Web Platform</div>
+          </div>
+          <p class="fixture-desc">A job and internship portal designed for Kenyan students and graduates. Users can explore opportunities, search and filter listings, submit applications with a resume, while employers and administrators manage postings and applications through separate dashboards.</p>
+          <div class="fixture-note"><b>The hard part:</b> designing a 13-table schema that cleanly separates student, employer and admin permissions while keeping the application flow — from posting a job to reviewing a resume — simple on the surface.</div>
+
+          <ul class="feature-list">
+            <li>Job and internship listings with search and filters</li>
+            <li>Apply with a PDF resume; employers review applications in their dashboard</li>
+            <li>Admin approval for new employers and postings</li>
+          </ul>
+
+          <div class="fixture-links">
+            <a data-link="live" target="_blank" rel="noopener">Live site →</a>
+            <a data-link="code" target="_blank" rel="noopener">Source code →</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-gallery" aria-label="TrailHire screenshots">
+            <figure><img src="images/Trailhire_home.png" alt="Trailhire Home screen" loading="lazy"> <figcaption>Trailhire Home screen</figcaption></figure>
+            <figure><img src="images/Trailhire_Job_searches.png" alt="Trailhire Job Listing" loading="lazy"> <figcaption>Trailhire Job Listing</figcaption></figure>
+            <figure><img src="images/Trailhire_admin_dashboard.png" alt="Trailhire Admin dashboard" loading="lazy"> <figcaption>Trailhire Admin dashboard</figcaption></figure>
+
+          </div>
+          <div class="lineup-label">Scoreline</div>
+          <div class="score-row">
+            <div class="score-stat"><div class="score-num">13</div><div class="score-label">DB Tables</div></div>
+            <div class="score-stat"><div class="score-num">3</div><div class="score-label">Dashboards</div></div>
+            <div class="score-stat"><div class="score-num">PDF</div><div class="score-label">Resume Upload</div></div>
+          </div>
+          <div class="lineup-label">Lineup</div>
+          <div class="lineup">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Prepared Statements</span>
+            <span class="tag">Session Auth</span><span class="tag">Custom CSS</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS / CASE STUDY -->
+<section class="section-pad" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-eyebrow">Case Study</div>
+        <h2 class="section-title">How the OCR Pipeline Happened</h2>
+      </div>
+      <div class="section-note">CertsVerify's batch upload feature — the path from a bad idea to something reliable.</div>
+    </div>
+
+    <p class="process-intro reveal">The goal was to let an administrator upload scanned certificates and extract key details such as student name, admission number, course and grade. The implementation evolved through several approaches before settling on an anchor-phrase parsing workflow.</p>
+
+    <div class="timeline reveal">
+      <div class="t-step rejected">
+        <div class="t-marker">1</div>
+        <div class="t-status">Rejected</div>
+        <h3 class="t-title">Manual field mapping per template</h3>
+        <div class="t-desc">First attempt assumed every certificate would follow one fixed layout, with data pulled from fixed coordinates on the page. It broke the moment a certificate used a different font size or margin — which was most of them. Real-world scans are never that consistent.</div>
+      </div>
+      <div class="t-step rejected">
+        <div class="t-marker">2</div>
+        <div class="t-status">Rejected</div>
+        <h3 class="t-title">Raw text dump + regex guessing</h3>
+        <div class="t-desc">Second attempt ran OCR and tried to regex-match likely patterns out of the raw text blob. Better, but still fragile — regex had no idea whether "John Kamau" was a student name or an examiner's signature, so accuracy stayed too low to trust for admin use.</div>
+      </div>
+      <div class="t-step accepted">
+        <div class="t-marker">✓</div>
+        <div class="t-status">Shipped</div>
+        <h3 class="t-title">Ghostscript → Tesseract with anchor-phrase parsing</h3>
+        <div class="t-desc">The final approach uses Ghostscript to convert uploaded PDFs into page images, followed by Tesseract OCR. The parser looks for <b>known anchor phrases</b> on certificates and extracts nearby values rather than relying only on fixed page coordinates or raw text order. This makes the approach more adaptable to differences between certificate layouts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-eyebrow">About</div>
+        <h2 class="section-title">Off the Pitch</h2>
+      </div>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>I'm a third-year <strong>Bachelor of Business Information Technology</strong> student at Strathmore University in Nairobi, graduating in 2028. I completed my Diploma in BIT in 2024 and have spent the time since building full projects rather than just exercises — real auth systems, real databases, real bugs at 1am.</p>
+        <p>Most of what I build starts from a Kenyan problem: proving a degree is real, finding an internship, making money last until the end of the month, or deciding what to cook tonight. Lately that has taken me from PHP web platforms into <strong>native Android with Kotlin</strong>.</p>
+        <p>Outside of code, I'm part of the <strong>Strathmore Mathematics Club</strong> and I play <strong>university football</strong> — which has taught me as much about handling pressure and playing my position as any lecture has.</p>
+        <p>I'm currently seeking an <strong>8–12-week industrial attachment beginning January 2027</strong>, preferably in Nairobi, where I can contribute to software development, application support or business systems while learning from an experienced team.</p>
+        <p>I also completed an eight-week community service placement at <strong>Miale ya Tumaini</strong> in January–February 2024, supporting daily meal preparation, cleaning and activities with children.</p>
+      </div>
+
+      <div class="player-card">
+        <div class="player-card-top">
+          <div>
+            <div class="player-num">01</div>
+            <div class="player-role">Full-Stack · Android</div>
+          </div>
+          <div class="player-flag">🇰🇪 NBO</div>
+        </div>
+        <!-- Replace this placeholder with your own portrait image. See README.md for instructions. -->
+        <figure class="profile-photo-slot">
+          <div class="profile-photo-placeholder"><span>ADD YOUR PHOTO</span></div>
+          <figure><img src="images/Profile_pic.png" alt="Profile pic" loading="lazy"></figure>
+        </figure>
+        <div class="player-stats">
+          <div class="player-stat-row"><span>Institution</span><span>Strathmore University</span></div>
+          <div class="player-stat-row"><span>Programme</span><span>BBIT, Year 3</span></div>
+          <div class="player-stat-row"><span>Graduating</span><span>2028</span></div>
+          <div class="player-stat-row"><span>Club</span><span>Mathematics Club</span></div>
+          <div class="player-stat-row"><span>Position</span><span>University Football</span></div>
+          <div class="player-stat-row"><span>Base</span><span>Nairobi, Kenya</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOW -->
+<section class="section-pad" id="now">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-eyebrow">Right Now</div>
+        <h2 class="section-title">Currently In Play</h2>
+      </div>
+      <div class="section-note">What I'm building or learning at the moment — this section moves, unlike the rest of the site.</div>
+    </div>
+
+    <div class="now-card reveal">
+      <div class="now-row active">
+        <div class="now-dot"></div>
+        <div class="now-content">
+          <div class="now-label">Building</div>
+          <div class="now-title">Preparing projects for attachment applications</div>
+          <div class="now-desc">Improving project documentation, capturing application screenshots and preparing a clearer portfolio of web and Android work.</div>
+        </div>
+      </div>
+      <div class="now-row">
+        <div class="now-dot"></div>
+        <div class="now-content">
+          <div class="now-label">Learning</div>
+          <div class="now-title">Mobile programming with Kotlin</div>
+          <div class="now-desc">Continuing to build practical skills in Kotlin, web development, databases and software design through university coursework and personal projects.</div>
+        </div>
+      </div>
+      <div class="now-row">
+        <div class="now-dot"></div>
+        <div class="now-content">
+          <div class="now-label">Exploring</div>
+          <div class="now-title">Internship opportunities in Kenya's IT sector</div>
+          <div class="now-desc">Available for an 8–12-week industrial attachment from January 2027, preferably in Nairobi.</div>
+        </div>
+      </div>
+    </div>
+    <div class="now-updated reveal">Last updated: November 2026</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section-pad" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-eyebrow">Toolkit</div>
+        <h2 class="section-title">The Squad</h2>
+      </div>
+      <div class="section-note">Technologies and tools I have used across coursework and projects.</div>
+    </div>
+
+    <div class="skills-grid reveal">
+      <div class="skill-block">
+        <h3>Languages</h3>
+        <div class="skill-list">
+          <span class="tag">PHP</span><span class="tag">Kotlin</span><span class="tag">JavaScript</span>
+          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">HTML / CSS</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>Web</h3>
+        <div class="skill-list">
+          <span class="tag">Bootstrap 5</span><span class="tag">Responsive Design</span>
+          <span class="tag">Session Auth</span><span class="tag">REST APIs</span><span class="tag">JSON</span><span class="tag">PHPMailer</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>Mobile</h3>
+        <div class="skill-list">
+          <span class="tag">Android Studio</span><span class="tag">Kotlin</span>
+          <span class="tag">XML</span><span class="tag">Firebase</span><span class="tag">Mobile UI Design</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>Data &amp; Tools</h3>
+        <div class="skill-list">
+          <span class="tag">MySQL</span><span class="tag">Schema Design</span><span class="tag">Prepared Statements</span>
+          <span class="tag">Tesseract OCR</span><span class="tag">Git &amp; GitHub</span><span class="tag">XAMPP</span><span class="tag">Postman</span><span class="tag">Figma</span><span class="tag">Excel</span><span class="tag">VS Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Open for Attachment</div>
+    <h2 class="reveal">Let's build<br>something <span class="accent">worth shipping.</span></h2>
+    <p class="reveal">Seeking an 8–12-week industrial attachment beginning January 2027, preferably in Nairobi. Interested in software development, application support and business systems.</p>
+    <!-- Links are filled from the "YOUR LINKS" block in script.js -->
+    <div class="contact-links reveal">
+      <a data-contact="email" class="btn btn-primary">Email Me</a>
+      <a data-contact="github" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      <a data-contact="linkedin" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-contact="cv" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Anthony Kamau. Built from scratch.</span>
+    <span>Nairobi, Kenya</span>
+  </div>
+</footer>
+
+<!-- Demo video player (opens when you click "Watch demo") -->
+<dialog class="video-modal" id="videoModal" aria-label="Project demo video">
+  <div class="video-modal-bar">
+    <span class="video-modal-title" id="videoModalTitle">Demo</span>
+    <button type="button" class="video-close" id="videoClose" aria-label="Close video">✕</button>
+  </div>
+  <div class="video-frame" id="videoFrame"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
